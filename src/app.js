@@ -27,16 +27,16 @@ function displayTemperature(response) {
   let humidityElement = document.querySelector("#humidity");
   let windspeedElement = document.querySelector("#windspeed");
   let dateElement = document.querySelector("#date");
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
-  cityElement.innerHTML = response.data.name;
-  descriptionElement.innerHTML = response.data.weather[0].description;
-  humidityElement.innerHTML = response.data.main.humidity;
+  let iconElement = document.querySelector("#icon");
+  temperatureElement.innerHTML = Math.round(response.data.temperature.current);
+  cityElement.innerHTML = response.data.city;
+  descriptionElement.innerHTML = response.data.condition.description;
+  humidityElement.innerHTML = response.data.temperature.humidity;
   windspeedElement.innerHTML = Math.round(response.data.wind.speed);
-  dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  dateElement.innerHTML = formatDate(response.data.time * 1000);
+  iconElement.src = response.data.condition.icon_url;
 }
 
 let apiKey = "c097o6f11c380bft35a9aaa4c76c29ad";
-let apiUrl =
-  "https://api.shecodes.io/weather/v1/current?query=Porvoo&key=c097o6f11c380bft35a9aaa4c76c29ad&units=metric";
-
+let apiUrl = `https://api.shecodes.io/weather/v1/current?query=Lisbon&key=c097o6f11c380bft35a9aaa4c76c29ad&units=metric`;
 axios.get(apiUrl).then(displayTemperature);
