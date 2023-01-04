@@ -37,6 +37,19 @@ function displayTemperature(response) {
   iconElement.src = response.data.condition.icon_url;
 }
 
-let apiKey = "c097o6f11c380bft35a9aaa4c76c29ad";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=Lisbon&key=c097o6f11c380bft35a9aaa4c76c29ad&units=metric`;
-axios.get(apiUrl).then(displayTemperature);
+function search(city) {
+  let apiKey = "c097o6f11c380bft35a9aaa4c76c29ad";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+search("Porvoo");
