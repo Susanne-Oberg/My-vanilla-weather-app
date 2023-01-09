@@ -42,6 +42,7 @@ li:first-letter {
 .overview {
   margin-bottom: 20px;
 }
+
 .weather-temperature img {
   margin-right: 10px;
   height: 64px;
@@ -58,4 +59,19 @@ li:first-letter {
   position: relative;
   font-size: 16px;
   top: -34px;
+}
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: #000;
+}
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.5;
+}
+.weather-forecast-temperature-min {
+  opacity: 0.5;
+}
+.weather-forecast-temperature {
+  font-size: 13px;
 }
