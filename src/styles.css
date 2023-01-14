@@ -45,20 +45,25 @@ li:first-letter {
 
 .weather-temperature img {
   margin-right: 10px;
-  height: 64px;
-  width: 64px;
+  margin-top: -20px;
+  height: 88px;
+  width: 88px;
 }
 .weather-temperature strong {
   color: rgb(95, 149, 193);
-  font-size: 58px;
+  font-size: 48px;
   line-height: 1;
   font-weight: 400;
 }
 
 .weather-temperature .units {
   position: relative;
-  font-size: 16px;
+  font-size: 15px;
   top: -34px;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
 }
 .weather-forecast {
   margin-top: 20px;
