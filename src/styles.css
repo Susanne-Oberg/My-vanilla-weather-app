@@ -1,10 +1,11 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(#141617, #add0f7);
+  background: linear-gradient(#fafcfc, #accff6);
+  background-attachment: fixed;
 }
 
 h1 {
-  color: lightslategray;
+  color: rgb(89, 132, 191);
   font-size: 24px;
   font-weight: 100;
   line-height: 28px;
@@ -27,6 +28,7 @@ li {
 li:first-letter {
   text-transform: capitalize;
 }
+
 .form-control {
   margin-bottom: 10px;
 }
@@ -41,11 +43,12 @@ li:first-letter {
   padding: 20px;
   border: 1px solid #cfdcee;
   border-radius: 15px;
-  background: linear-gradient(#add0f7, #f6f8f9);
+  background: linear-gradient(#accff6, #fafcfc);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 .overview {
   margin-bottom: 20px;
+  margin-left: 20px;
 }
 .conditions {
   margin-left: 90px;
